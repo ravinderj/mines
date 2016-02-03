@@ -1,0 +1,23 @@
+{
+  "name": "minesapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BugDiver/mines.git"
+  },
+  "author": "Vinay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BugDiver/mines/issues"
+  },
+  "homepage": "https://github.com/BugDiver/mines#readme",
+  "devDependencies": {
+    "electron-packager": "^5.2.1",
+    "electron-prebuilt": "^0.36.7"
+  }
+}
