@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "build": "electron-packager . mine --platform=darwin --arch=x64 --version=0.36.7 && cp ./bomb.icns ./mine-darwin-x64/mine.app/Contents/Resources/atom.icns"
   },
   "repository": {
     "type": "git",
