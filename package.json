@@ -2,10 +2,10 @@
   "name": "minesapp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . mine --platform=darwin --arch=x64 --version=0.36.7 && cp ./bomb.icns ./mine-darwin-x64/mine.app/Contents/Resources/atom.icns"
+    "build": "electron-packager . Minescape --platform=darwin --arch=x64 --version=0.36.7 && cp ./app/public/resources/bomb.icns ./Minescape-darwin-x64/Minescape.app/Contents/Resources/atom.icns"
   },
   "repository": {
     "type": "git",

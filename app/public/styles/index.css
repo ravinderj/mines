@@ -1,0 +1,25 @@
+body{
+	font-family: sans-serif;
+	text-align: center;
+	background-image: url("../resources/minescape.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+button{
+	text-align: center;
+	background-color: skyblue;
+    font-size: 80px;
+    border-radius: 10px;
+}
+
+.game{
+	margin-top: 5%;
+	font-size: 100px;
+	color: skyblue;
+}
+.keys{
+	margin-top: 10%;
+}
