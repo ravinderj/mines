@@ -4,7 +4,7 @@ var BrowserWindow = electron.BrowserWindow;
 var mainWindow;
 
 function createWindow () {
-	mainWindow = new BrowserWindow({width: 1280, height: 740});
+	mainWindow = new BrowserWindow({width: 1680, height: 932});
 	mainWindow.loadURL('file://' + __dirname + '/app/public/index.html');
 	mainWindow.openDevTools();
 	mainWindow.on('closed', function() {
