@@ -1,0 +1,29 @@
+body{
+	font-family: sans-serif;
+	width: 100%;
+	background-color: #8B99A2;
+}
+.game{
+	margin: 2%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    color: #8B99A2;
+    -webkit-text-fill-color: #8B99A2;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+}
+
+.mines{
+	text-align: center;
+	width: 100%;	
+}
+.matrix{
+	margin:auto;	
+}
+.steps{
+	background-color: white;
+	width : 60px;
+	height : 60px;
+}
