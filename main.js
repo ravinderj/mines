@@ -1,6 +1,7 @@
 var electron = require('electron');
 var app = electron.app;
 var BrowserWindow = electron.BrowserWindow;
+var mainWindow;
 
 function createWindow () {
 	mainWindow = new BrowserWindow({width: 1280, height: 740});

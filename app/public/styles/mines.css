@@ -4,26 +4,29 @@ body{
 	background-color: #8B99A2;
 }
 .game{
-	margin: 2%;
+	margin-bottom: 0.5%;
+	margin-top: 1%;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 900;
     color: #8B99A2;
     -webkit-text-fill-color: #8B99A2;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
 }
-}
-
 .mines{
 	text-align: center;
 	width: 100%;	
 }
 .matrix{
+	border-radius: 3px;
 	margin:auto;	
 }
 .steps{
+	text-align: center;
 	background-color: white;
 	width : 60px;
 	height : 60px;
+	font-size: 40px;
+	border-radius: 8px;
 }
