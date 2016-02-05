@@ -4,8 +4,6 @@ var Game = require('../../lib/mineLib');
 var game = new Game();
 var validMoves = game.getInitialMoves();
 
-console.log(game.path);
-
 var player = "🐞";
 
 var showCurrentMove = function(move){
@@ -26,7 +24,8 @@ var showWinner = function(){
 	$('.home').append(player);
 	$('.home').css('font-size','100px');
 	removeCharecter();
-	removeCharecter();
+	removeMarker();
+	alert('CONGRATS!!!!!!\n Yòü Hãveë Rêäčhed Hømę..');
 	setTimeout(goToHome ,2000);
 }
 
@@ -48,7 +47,9 @@ var removeCharecter = function(){
 };
 
 var removeMarker = function(){
-	$('.steps').removeClass('red').removeClass('green').removeClass('yellow');	
+	$('.steps').removeClass('red')
+		.removeClass('green')
+		.removeClass('yellow');	
 };
 
 var proceed = function(move){
@@ -65,7 +66,7 @@ var proceed = function(move){
 		showCurrentMove(move);
 	}else{
 		showWrongMove(move);
-		setTimeout(backToStart , 2000);
+		setTimeout(backToStart , 1000);
 	}
 };
 

@@ -5,8 +5,8 @@ var mainWindow;
 
 function createWindow () {
 	mainWindow = new BrowserWindow({width: 1680, height: 932});
+	mainWindow.setResizable(false);
 	mainWindow.loadURL('file://' + __dirname + '/app/public/index.html');
-	mainWindow.openDevTools();
 	mainWindow.on('closed', function() {
 		mainWindow = null;
 	});
@@ -15,9 +15,7 @@ function createWindow () {
 app.on('ready', createWindow);
 
 app.on('window-all-closed', function () {
-	// if (process.platform !== 'darwin') {
 		app.quit();
-	// }
 });
 
 app.on('activate', function () {
