@@ -4,13 +4,11 @@ var Game = require('../../lib/mineLib');
 var game = new Game();
 var validMoves = game.getInitialMoves();
 
-var player = "🐞";
-
 var showCurrentMove = function(move){
 	removeCharecter();
 	$('.green').removeClass('green');	
 	$('#'+move).addClass('green');
-	$('#'+move).html(player);
+	$('#'+move).html("🐞");
 }
 
 var showValidMoves = function(moves){
@@ -21,12 +19,12 @@ var showValidMoves = function(moves){
 	});
 };
 var showWinner = function(){
-	$('.home').append(player);
-	$('.home').css('font-size','100px');
+	$('.home').append("🐞");
+	$('.home').css('font-size','80px');
 	removeCharecter();
 	removeMarker();
-	alert('CONGRATS!!!!!!\n Yòü Hãveë Rêäčhed Hømę..');
-	setTimeout(goToHome ,2000);
+	var message = 'CONGRATS!!!!!!\n Yòü Hãveë Rêäčhed Hømę..';
+	setTimeout(goToHome ,2000,message);
 }
 
 var showWrongMove = function(move){
@@ -70,7 +68,10 @@ var proceed = function(move){
 	}
 };
 
-var goToHome = function(){
+var goToHome = function(message){
+	if(message){
+		alert(message);
+	}
 	var mainWindow = remote.getCurrentWindow();
 	var url = path.join('file://', __dirname,'../index.html')
 	mainWindow.loadURL(url);
