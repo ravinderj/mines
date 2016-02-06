@@ -1,3 +1,4 @@
+var $ = require('jquery');
 var path = require('path');
 var remote = require('remote');
 var Game = require('../../lib/mineLib');
@@ -38,7 +39,7 @@ var backToStart = function(){
 	main();
 }
 var removeCharecter = function(){
-	divs = document.getElementsByClassName( 'steps' );
+	divs = $('.steps');
 	[].slice.call( divs ).forEach(function ( div ) {
 	    div.innerHTML = '';
 	});
@@ -52,7 +53,6 @@ var removeMarker = function(){
 
 var proceed = function(move){
 	var status = game.statusFor(move);
-	console.log(status);
 	if(!game.isValidMove(move ,validMoves)){
 		alert('Click From Yellow Boxes');
 	}else if(status.isWon){
@@ -64,7 +64,7 @@ var proceed = function(move){
 		showCurrentMove(move);
 	}else{
 		showWrongMove(move);
-		setTimeout(backToStart , 1000);
+		setTimeout(backToStart , 500);
 	}
 };
 

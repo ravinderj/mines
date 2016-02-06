@@ -1,15 +1,20 @@
+var $ = require('jquery');
 var path = require('path')
 var remote = require('remote');
 
-window.onload = function(){
-       document.getElementById("play-btn").addEventListener("click", function (e) {
-              var window = remote.getCurrentWindow();
-              var url = path.join('file://', __dirname,'../mines.html')
-              window.loadURL(url); 
-       });
-       document.getElementById("help-btn").addEventListener("click", function (e) {
-              var window = remote.getCurrentWindow();
-              var url = path.join('file://', __dirname,'../help.html')
-              window.loadURL(url); 
-       });
+var renderMinesPage = function(){
+       var window = remote.getCurrentWindow();
+       var url = path.join('file://', __dirname,'../mines.html')
+       window.loadURL(url); 
 };
+var renderHelpPage = function(){
+       var window = remote.getCurrentWindow();
+       var url = path.join('file://', __dirname,'../help.html')
+       window.loadURL(url);      
+}
+var onReady = function(){
+       $('#play-btn').click(renderMinesPage);
+       $('#help-btn').click(renderHelpPage);
+}
+
+$( document ).ready(onReady);
