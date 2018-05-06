@@ -1,5 +1,6 @@
 var path = require('path');
-var remote = require('remote');
+let $ = require('jquery');
+var {remote} = require('electron');
 
 var goToHome = function(){
 	var mainWindow = remote.getCurrentWindow();
@@ -8,5 +9,5 @@ var goToHome = function(){
 };
 
 $('.back').click(function(){
-	goToHome(); 
+	goToHome();
 });

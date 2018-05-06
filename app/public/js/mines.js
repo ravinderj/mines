@@ -1,13 +1,13 @@
 var $ = require('jquery');
 var path = require('path');
-var remote = require('remote');
+var {remote} = require('electron');
 var Game = require('../../lib/mineLib');
 var game = new Game();
 var validMoves = game.getInitialMoves();
 
 var showCurrentMove = function(move){
 	removeCharecter();
-	$('.green').removeClass('green');	
+	$('.green').removeClass('green');
 	$('#'+move).addClass('green');
 	$('#'+move).html("🐞");
 }
@@ -48,7 +48,7 @@ var removeCharecter = function(){
 var removeMarker = function(){
 	$('.steps').removeClass('red')
 		.removeClass('green')
-		.removeClass('yellow');	
+		.removeClass('yellow');
 };
 
 var proceed = function(move){
@@ -78,7 +78,7 @@ var goToHome = function(message){
 };
 
 $('.back').click(function(){
-	goToHome(); 
+	goToHome();
 });
 
 $('.steps').click(function(){
